@@ -8,3 +8,7 @@ Edit config.json
 - add destination where you want to save your file: s3, sftp etc.
 
 ### Config example
+
+### DBs support
+- MySQL
+- PostgreSQL
