@@ -8,6 +8,11 @@ import (
 )
 
 type Configs struct {
+	Files []any `json:"files"`
+	Dbs   []struct {
+		Type    string `json:"type"`
+		Connstr string `json:"connstr"`
+	} `json:"dbs"`
 }
 
 func getConfigs() Configs {
