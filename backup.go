@@ -1,5 +1,8 @@
 package main
 
-func main() {
+import "fmt"
 
+func main() {
+	config := getConfigs()
+	fmt.Println(config)
 }
