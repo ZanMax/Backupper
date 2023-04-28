@@ -12,10 +12,12 @@ import (
 
 type Configs struct {
 	Files []any `json:"files"`
-	Dbs   []struct {
-		Type    string `json:"type"`
-		Connstr string `json:"connstr"`
-	} `json:"dbs"`
+	DBs   []DB  `json:"dbs"`
+}
+
+type DB struct {
+	Type       string `json:"type"`
+	ConnString string `json:"connString"`
 }
 
 func getConfigs() Configs {
