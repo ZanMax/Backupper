@@ -22,7 +22,7 @@ Edit config.json
     {
       "type": "mysql",
       "connString": "mysql://user:pass@host:port/dbname",
-      "dbName": [
+      "dbNames": [
         "dbname1",
         "dbname2",
         "dbname3"
@@ -31,7 +31,7 @@ Edit config.json
     {
       "type": "mysql",
       "connString": "mysql://user:pass@host:port/dbname",
-      "dbName": [
+      "dbNames": [
         "dbname1",
         "dbname2",
         "dbname3"

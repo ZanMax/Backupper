@@ -16,8 +16,9 @@ type Configs struct {
 }
 
 type DB struct {
-	Type       string `json:"type"`
-	ConnString string `json:"connString"`
+	Type       string   `json:"type"`
+	ConnString string   `json:"connString"`
+	DbNames    []string `json:"dbNames"`
 }
 
 func getConfigs() Configs {
