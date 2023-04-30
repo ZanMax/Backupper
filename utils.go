@@ -8,11 +8,12 @@ import (
 	"log"
 	"os"
 	"path/filepath"
+	"time"
 )
 
 type Configs struct {
-	Files []any `json:"files"`
-	DBs   []DB  `json:"dbs"`
+	Files []string `json:"files"`
+	DBs   []DB     `json:"dbs"`
 }
 
 type DB struct {
@@ -94,4 +95,20 @@ func addFileToArchive(archive *zip.Writer, fileName string) error {
 
 	_, err = io.Copy(writer, file)
 	return err
+}
+
+func checkFileExists(fileName string) bool {
+	if _, err := os.Stat(fileName); err == nil {
+		return true
+	}
+	return false
+}
+
+func getCurrentDateTime() string {
+	currentTime := time.Now()
+	return currentTime.Format("20060102150405")
+}
+
+func createBackupName() string {
+	return "backup_" + getCurrentDateTime() + ".zip"
 }
